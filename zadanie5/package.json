@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"zadanie5": "node userInfo.js"
+	},
+	"dependencies": {
+		"async": "^3.2.4",
+		"axios": "^1.3.3"
+	}
+}
