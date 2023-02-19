@@ -19,4 +19,4 @@ async function getUserInfo(username) {
 	}
 }
 
-module.exports.getUserInfo = getUserInfo
+module.exports = getUserInfo
