@@ -1,12 +1,12 @@
 const axios = require('axios')
 
-module.exports = async function (username) {
+async function getUserInfo(username) {
 	try {
 		let repoNames = []
 
 		const {
 			data: { name, followers, public_repos, repos_url, location },
-		} = await axios.get(`https://api.github.com/users/${octocat}`)
+		} = await axios.get(`https://api.github.com/users/${username}`)
 
 		if (public_repos > 0) {
 			const { data } = await axios.get(repos_url)
@@ -18,3 +18,5 @@ module.exports = async function (username) {
 		throw new Error('Request failed')
 	}
 }
+
+module.exports.getUserInfo = getUserInfo
